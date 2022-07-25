@@ -37,8 +37,6 @@ class Softmax:
             indices = np.random.choice(n_data, batch_size)
             X_batch = X_train[indices]
             y_batch = y_train[indices]
-            self.calc_gradient(X_batch, y_batch)
-            break
             grads_w = self.calc_gradient(X_batch, y_batch)
             self.w -= self.lr * grads_w
         return
